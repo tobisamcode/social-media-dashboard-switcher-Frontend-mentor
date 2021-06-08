@@ -1,0 +1,71 @@
+/* Primary Colors */
+/* Drak Mode */
+/* Light Theme */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body.dark {
+  background: #1f212e;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+body .container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Primary Colors */
+/* Drak Mode */
+/* Light Theme */
+body.dark header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2.5em 0;
+}
+body.dark header .title-box .title {
+  color: white;
+}
+body.dark header .title-box p {
+  color: #8b97c6;
+  font-weight: 700;
+}
+body.dark header .toggle-mode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #8b97c6;
+  font-weight: 700;
+  font-size: 16px;
+}
+body.dark header .toggle-mode input[type=checkbox] {
+  -webkit-appearance: none;
+  width: 90px;
+  height: 40px;
+  border-radius: 100px;
+  margin-left: 20px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(to, #378fe6));
+  background: linear-gradient(to right, #378fe6 to #3eda82);
+  cursor: pointer;
+  outline: 0;
+  position: relative;
+}/*# sourceMappingURL=style.css.map */

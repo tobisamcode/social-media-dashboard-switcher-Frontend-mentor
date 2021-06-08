@@ -1,6 +1,29 @@
+@import 'variable';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 * {
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
+    box-sizing: border-box;
+}
+
+body.dark {
+    $ToggleBtnDark: linear-gradient(to right, hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+    $ColorDark: hsl(0, 0%, 100%);
+    $ColorDarkLight: hsl(228, 34%, 66%);
+    $BgLightCard: hsl(228, 28%, 20%);
+    $BgLightCardHover: hsl(228, 26%, 26%);
+    $BgLight: hsl(230, 17%, 14%);
+    $BgLightop: hsl(232, 19%, 15%);
+    background: $BgLightop;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
