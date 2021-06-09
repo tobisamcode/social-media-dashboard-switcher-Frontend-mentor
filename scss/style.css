@@ -63,9 +63,159 @@ body.dark header .toggle-mode input[type=checkbox] {
   height: 40px;
   border-radius: 100px;
   margin-left: 20px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(to, #378fe6));
-  background: linear-gradient(to right, #378fe6 to #3eda82);
+  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background: linear-gradient(to right, #378fe6, #3eda82);
   cursor: pointer;
   outline: 0;
   position: relative;
+}
+body.dark header .toggle-mode input[type=checkbox]::before {
+  content: "";
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  border-radius: 50px;
+  background: #1e202a;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+/* Primary Colors */
+/* Drak Mode */
+/* Light Theme */
+main .followers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+main .followers .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #252a41;
+  position: relative;
+}
+main .followers .card::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-radius: 8px 8px 0 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+main .followers .card.facebook::before {
+  background: #198ff5;
+}
+main .followers .card.twitter::before {
+  background: #1ca0f2;
+}
+main .followers .card.instagram::before {
+  background: -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996));
+  background: linear-gradient(to right, #fdc468, #df4996);
+}
+main .followers .card.youtube::before {
+  background: #c4032a;
+}
+main .followers .card .username,
+main .followers .card .title-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #8b97c6;
+}
+main .followers .card .username img,
+main .followers .card .title-card img {
+  margin-right: 10px;
+}
+main .followers .card .count-follow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 25px 0;
+  font-size: 1.1em;
+  font-weight: 400;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #8b97c6;
+}
+main .followers .card .count-follow span {
+  font-size: 4em;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: white;
+}
+main .followers .card .down {
+  color: #dc414c;
+}
+main .followers .card span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #1db489;
+  font-weight: 700;
+}
+main .followers .card span img {
+  margin-right: 5px;
+}
+
+main .overview {
+  margin-top: 50px;
+}
+main .overview h2 {
+  color: white;
+  font-size: 1.7em;
+}
+main .overview .grid-overview {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+main .overview .grid-overview .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #252a41;
+  position: relative;
+}
+main .overview .grid-overview .card .title-card {
+  margin-bottom: 20px;
+}
+main .overview .grid-overview .card .title-card span {
+  font-size: 1.1em;
+  color: #8b97c6;
 }/*# sourceMappingURL=style.css.map */
