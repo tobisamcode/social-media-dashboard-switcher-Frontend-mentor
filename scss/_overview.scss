@@ -1,0 +1,39 @@
+$ToggleBtnDark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+$ColorDark: hsl(0, 0%, 100%);
+$ColorDarkLight: hsl(228, 34%, 66%);
+$BgLightCard: hsl(228, 28%, 20%);
+$BgLightCardHover: hsl(228, 26%, 26%);
+$BgLight: hsl(230, 17%, 14%);
+$BgLightop: hsl(232, 19%, 15%);
+main {
+    .overview {
+        margin-top: 50px;
+        h2 {
+            color: $ColorDark;
+            font-size: 1.7em;
+        }
+        .grid-overview {
+            margin: 20px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 30px;
+            .card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px;
+                border-radius: 8px;
+                cursor: pointer;
+                background: $BgLightCard;
+                position: relative;
+                .title-card {
+                    margin-bottom: 20px;
+                    span {
+                        font-size: 1.1em;
+                        color: $ColorDarkLight;
+                    }
+                }
+            }
+        }
+    }
+}
