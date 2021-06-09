@@ -1,0 +1,92 @@
+@import 'variable';
+main {
+    $ToggleBtnDark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    $ColorDark: hsl(0, 0%, 100%);
+    $ColorDarkLight: hsl(228, 34%, 66%);
+    $BgLightCard: hsl(228, 28%, 20%);
+    $BgLightCardHover: hsl(228, 26%, 26%);
+    $BgLight: hsl(230, 17%, 14%);
+    $BgLightop: hsl(232, 19%, 15%);
+    .followers {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 30px;
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            background: $BgLightCard;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                height: 5px;
+                border-radius: 8px 8px 0 0;
+                left: 0;
+                right: 0;
+                top: 0;
+            }
+            &.facebook {
+                &::before {
+                    background: $Facebook;
+                }
+            }
+            &.twitter {
+                &::before {
+                    background: $Twitter;
+                }
+            }
+            &.instagram {
+                &::before {
+                    background: $Instagram;
+                }
+            }
+            &.youtube {
+                &::before {
+                    background: $YouTube;
+                }
+            }
+            .username,
+            .title-card {
+                display: flex;
+                justify-content: center;
+                color: $ColorDarkLight;
+                img {
+                    margin-right: 10px;
+                }
+            }
+            .count-follow {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 25px 0;
+                font-size: 1.1em;
+                font-weight: 400;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+                color: $ColorDarkLight;
+                span {
+                    font-size: 4em;
+                    font-weight: 700;
+                    letter-spacing: 0;
+                    color: $ColorDark;
+                }
+            }
+            .down {
+                color: $BrightRed;
+            }
+            span {
+                display: flex;
+                align-items: center;
+                color: $LimeGreen;
+                font-weight: 700;
+                img {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
