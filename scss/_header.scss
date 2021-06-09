@@ -1,6 +1,6 @@
 body.dark {
     header {
-        $ToggleBtnDark: linear-gradient(to right, hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+        $ToggleBtnDark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
         $ColorDark: hsl(0, 0%, 100%);
         $ColorDarkLight: hsl(228, 34%, 66%);
         $BgLightCard: hsl(228, 28%, 20%);
@@ -36,6 +36,15 @@ body.dark {
                 cursor: pointer;
                 outline: 0;
                 position: relative;
+                &::before {
+                    content: "";
+                    height: 40px;
+                    width: 40px;
+                    position: absolute;
+                    border-radius: 50px;
+                    background: $BgLight;
+                    transform: scale(.8);
+                }
             }
         }
     }
