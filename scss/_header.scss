@@ -1,12 +1,25 @@
 @import 'variable';
+@import 'mixins';
 header {
+    @include respond(mobile) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2.5em 0;
     .title-box {
+        @include respond(mobile) {
+            margin-bottom: 20px;
+            border-bottom: .1px solid var(--color-dark-light);
+            padding: 20px 0;
+        }
         .title {
             color: var(--color-dark);
+            margin-bottom: 10px;
         }
         p {
             color: var(--color-dark-light);
@@ -19,6 +32,9 @@ header {
         color: var(--color-dark-light);
         font-weight: 700;
         font-size: 16px;
+        @include respond(mobile) {
+            justify-items: flex-end;
+        }
         input[type=checkbox] {
             -webkit-appearance: none;
             width: 90px;
@@ -29,6 +45,12 @@ header {
             cursor: pointer;
             outline: 0;
             position: relative;
+            @include respond(mobile) {
+                width: 65px;
+                height: 30px;
+                border-radius: 50px;
+                margin-left: 180px;
+            }
             &::before {
                 content: "";
                 height: 40px;
@@ -36,7 +58,19 @@ header {
                 position: absolute;
                 border-radius: 50px;
                 background: var(--bakground-light);
-                transform: scale(.8);
+                transition: transform .3s;
+                transform: translateX(50px) scale(.8);
+                @include respond(mobile) {
+                    width: 30px;
+                    height: 30px;
+                    transform: translateX(35px) scale(.8);
+                }
+            }
+            &:checked::before {
+                transform: translateX(0) scale(0.8);
+                @include respond(mobile) {
+                    transform: translateX(1) scale(1);
+                }
             }
         }
     }
