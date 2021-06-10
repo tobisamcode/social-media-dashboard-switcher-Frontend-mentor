@@ -9,13 +9,42 @@ $Instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
 
 /* Drak Mode */
 
-$ToggleBtnDark: hsl(230, 22%, 74%);
+$BgLightL: hsl(0, 0%, 100%);
+$BgLightopL: hsl(225, 100%, 98%);
+$BgLightCardL: hsl(227, 47%, 96%);
+$BgLightCardHoverL: hsl(227, 32%, 86%);
+$ColorDarkL: hsl(230, 17%, 14%);
+$ColorDarkLightL: hsl(228, 12%, 44%);
+$ToggleBtnDarkL: hsl(230, 22%, 74%);
 
 /* Light Theme */
 
-$BgLight: hsl(0, 0%, 100%);
-$BgLightop: hsl(225, 100%, 98%);
-$BgLightCard: hsl(227, 47%, 96%);
-$BgLightCardHover: hsl(227, 32%, 86%);
-$ColorDark: hsl(230, 17%, 14%);
-$ColorDarkLight: hsl(228, 12%, 44%);
+$ToggleBtnDark: linear-gradient(to right, hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+$ColorDark: hsl(0, 0%, 100%);
+$ColorDarkLight: hsl(228, 34%, 66%);
+$BgLightCard: hsl(228, 28%, 20%);
+$BgLightCardHover: hsl(228, 26%, 26%);
+$BgLight: hsl(230, 17%, 14%);
+$BgLightop: hsl(232, 19%, 15%);
+
+/* Dark Theme */
+
+:root {
+    --bakground-light: #{$BgLightL};
+    --background-light-top: #{$BgLightopL};
+    --background-light-card: #{$BgLightCardL};
+    --background-light-card-hover: #{$BgLightCardHoverL};
+    --color-dark: #{$ColorDarkL};
+    --color-dark-light: #{$ColorDarkLightL};
+    --toggle-btn: #{$ToggleBtnDarkL};
+}
+
+.dark {
+    --bakground-light: #{$BgLight};
+    --background-light-top: #{$BgLightop};
+    --background-light-card: #{$BgLightCard};
+    --background-light-card-hover: #{$BgLightCardHover};
+    --color-dark: #{$ColorDark};
+    --color-dark-light: #{$ColorDarkLight};
+    --toggle-btn: #{$ToggleBtnDark};
+}
