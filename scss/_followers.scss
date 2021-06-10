@@ -1,14 +1,4 @@
 @import 'variable';
-body.dark {
-    $ToggleBtnDark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-    $ColorDark: hsl(0, 0%, 100%);
-    $ColorDarkLight: hsl(228, 34%, 66%);
-    $BgLightCard: hsl(228, 28%, 20%);
-    $BgLightCardHover: hsl(228, 26%, 26%);
-    $BgLight: hsl(230, 17%, 14%);
-    $BgLightop: hsl(232, 19%, 15%);
-}
-
 main {
     .followers {
         display: grid;
@@ -21,10 +11,10 @@ main {
             padding: 30px;
             border-radius: 8px;
             cursor: pointer;
-            background: $BgLightCard;
+            background: var(--background-light-card);
             position: relative;
             &:hover {
-                background: $BgLightCardHover;
+                background: var(--background-light-card-hover);
             }
             &::before {
                 content: '';
@@ -59,7 +49,7 @@ main {
             .title-card {
                 display: flex;
                 justify-content: center;
-                color: $ColorDarkLight;
+                color: var(--color-dark-light);
                 img {
                     margin-right: 10px;
                 }
@@ -73,12 +63,12 @@ main {
                 font-weight: 400;
                 letter-spacing: 5px;
                 text-transform: uppercase;
-                color: $ColorDarkLight;
+                color: var(--color-dark-light);
                 span {
                     font-size: 4em;
                     font-weight: 700;
                     letter-spacing: 0;
-                    color: $ColorDark;
+                    color: var(--color-dark);
                 }
             }
             .down {
