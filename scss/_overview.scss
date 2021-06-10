@@ -1,19 +1,9 @@
 @import 'variable';
-body.dark {
-    $ToggleBtnDark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-    $ColorDark: hsl(0, 0%, 100%);
-    $ColorDarkLight: hsl(228, 34%, 66%);
-    $BgLightCard: hsl(228, 28%, 20%);
-    $BgLightCardHover: hsl(228, 26%, 26%);
-    $BgLight: hsl(230, 17%, 14%);
-    $BgLightop: hsl(232, 19%, 15%);
-}
-
 main {
     .overview {
         margin-top: 50px;
         h2 {
-            color: $ColorDark;
+            color: var(--color-dark);
             font-size: 1.7em;
         }
         .grid-overview {
@@ -28,16 +18,16 @@ main {
                 padding: 30px;
                 border-radius: 8px;
                 cursor: pointer;
-                background: $BgLightCard;
+                background: var(--background-light-card);
                 position: relative;
                 &:hover {
-                    background: $BgLightCardHover;
+                    background: var(--background-light-card-hover);
                 }
                 .title-card {
                     margin-bottom: 20px;
                     span {
                         font-size: 1.1em;
-                        color: $ColorDarkLight;
+                        color: var(--color-dark-light);
                     }
                 }
                 .title-card,
@@ -52,7 +42,7 @@ main {
                     p {
                         font-size: 2.8em;
                         font-weight: 700;
-                        color: $ColorDark;
+                        color: var(--color-dark);
                     }
                 }
             }

@@ -20,7 +20,7 @@
   --background-light-card-hover: #313854;
   --color-dark: white;
   --color-dark-light: #8b97c6;
-  --toggle-btn: linear-gradient(to right, #378fe6 to #3eda82);
+  --toggle-btn: linear-gradient(to right, #378fe6, #3eda82);
 }
 
 * {
@@ -35,7 +35,7 @@
 body {
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  background: #1e202a;
+  background: var(--bakground-light);
 }
 body .container {
   width: 80%;
@@ -63,7 +63,7 @@ body .container {
   --background-light-card-hover: #313854;
   --color-dark: white;
   --color-dark-light: #8b97c6;
-  --toggle-btn: linear-gradient(to right, #378fe6 to #3eda82);
+  --toggle-btn: linear-gradient(to right, #378fe6, #3eda82);
 }
 
 /* Primary Colors */
@@ -87,7 +87,7 @@ body .container {
   --background-light-card-hover: #313854;
   --color-dark: white;
   --color-dark-light: #8b97c6;
-  --toggle-btn: linear-gradient(to right, #378fe6 to #3eda82);
+  --toggle-btn: linear-gradient(to right, #378fe6, #3eda82);
 }
 
 header {
@@ -103,10 +103,10 @@ header {
   padding: 2.5em 0;
 }
 header .title-box .title {
-  color: white;
+  color: var(--color-dark);
 }
 header .title-box p {
-  color: #8b97c6;
+  color: var(--color-dark-light);
   font-weight: 700;
 }
 header .toggle-mode {
@@ -116,7 +116,7 @@ header .toggle-mode {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #8b97c6;
+  color: var(--color-dark-light);
   font-weight: 700;
   font-size: 16px;
 }
@@ -126,8 +126,7 @@ header .toggle-mode input[type=checkbox] {
   height: 40px;
   border-radius: 100px;
   margin-left: 20px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(to, #378fe6));
-  background: linear-gradient(to right, #378fe6 to #3eda82);
+  background: var(--toggle-btn);
   cursor: pointer;
   outline: 0;
   position: relative;
@@ -138,7 +137,7 @@ header .toggle-mode input[type=checkbox]::before {
   width: 40px;
   position: absolute;
   border-radius: 50px;
-  background: #1e202a;
+  background: var(--bakground-light);
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }
@@ -164,7 +163,7 @@ header .toggle-mode input[type=checkbox]::before {
   --background-light-card-hover: #313854;
   --color-dark: white;
   --color-dark-light: #8b97c6;
-  --toggle-btn: linear-gradient(to right, #378fe6 to #3eda82);
+  --toggle-btn: linear-gradient(to right, #378fe6, #3eda82);
 }
 
 main .followers {
@@ -186,11 +185,11 @@ main .followers .card {
   padding: 30px;
   border-radius: 8px;
   cursor: pointer;
-  background: #252a41;
+  background: var(--background-light-card);
   position: relative;
 }
 main .followers .card:hover {
-  background: #313854;
+  background: var(--background-light-card-hover);
 }
 main .followers .card::before {
   content: "";
@@ -222,7 +221,7 @@ main .followers .card .title-card {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #8b97c6;
+  color: var(--color-dark-light);
 }
 main .followers .card .username img,
 main .followers .card .title-card img {
@@ -244,13 +243,13 @@ main .followers .card .count-follow {
   font-weight: 400;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #8b97c6;
+  color: var(--color-dark-light);
 }
 main .followers .card .count-follow span {
   font-size: 4em;
   font-weight: 700;
   letter-spacing: 0;
-  color: white;
+  color: var(--color-dark);
 }
 main .followers .card .down {
   color: #dc414c;
@@ -290,14 +289,14 @@ main .followers .card span img {
   --background-light-card-hover: #313854;
   --color-dark: white;
   --color-dark-light: #8b97c6;
-  --toggle-btn: linear-gradient(to right, #378fe6 to #3eda82);
+  --toggle-btn: linear-gradient(to right, #378fe6, #3eda82);
 }
 
 main .overview {
   margin-top: 50px;
 }
 main .overview h2 {
-  color: white;
+  color: var(--color-dark);
   font-size: 1.7em;
 }
 main .overview .grid-overview {
@@ -320,18 +319,18 @@ main .overview .grid-overview .card {
   padding: 30px;
   border-radius: 8px;
   cursor: pointer;
-  background: #252a41;
+  background: var(--background-light-card);
   position: relative;
 }
 main .overview .grid-overview .card:hover {
-  background: #313854;
+  background: var(--background-light-card-hover);
 }
 main .overview .grid-overview .card .title-card {
   margin-bottom: 20px;
 }
 main .overview .grid-overview .card .title-card span {
   font-size: 1.1em;
-  color: #8b97c6;
+  color: var(--color-dark-light);
 }
 main .overview .grid-overview .card .title-card,
 main .overview .grid-overview .card .text-card {
@@ -354,5 +353,5 @@ main .overview .grid-overview .card .text-card {
 main .overview .grid-overview .card .text-card p {
   font-size: 2.8em;
   font-weight: 700;
-  color: white;
+  color: var(--color-dark);
 }/*# sourceMappingURL=style.css.map */
