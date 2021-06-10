@@ -102,8 +102,31 @@ header {
           align-items: center;
   padding: 2.5em 0;
 }
+@media (max-width: 450px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 20px 0;
+  }
+}
+@media (max-width: 450px) {
+  header .title-box {
+    margin-bottom: 20px;
+    border-bottom: 0.1px solid var(--color-dark-light);
+    padding: 20px 0;
+  }
+}
 header .title-box .title {
   color: var(--color-dark);
+  margin-bottom: 10px;
 }
 header .title-box p {
   color: var(--color-dark-light);
@@ -120,6 +143,11 @@ header .toggle-mode {
   font-weight: 700;
   font-size: 16px;
 }
+@media (max-width: 450px) {
+  header .toggle-mode {
+    justify-items: flex-end;
+  }
+}
 header .toggle-mode input[type=checkbox] {
   -webkit-appearance: none;
   width: 90px;
@@ -131,6 +159,14 @@ header .toggle-mode input[type=checkbox] {
   outline: 0;
   position: relative;
 }
+@media (max-width: 450px) {
+  header .toggle-mode input[type=checkbox] {
+    width: 65px;
+    height: 30px;
+    border-radius: 50px;
+    margin-left: 180px;
+  }
+}
 header .toggle-mode input[type=checkbox]::before {
   content: "";
   height: 40px;
@@ -138,8 +174,30 @@ header .toggle-mode input[type=checkbox]::before {
   position: absolute;
   border-radius: 50px;
   background: var(--bakground-light);
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateX(50px) scale(0.8);
+          transform: translateX(50px) scale(0.8);
+}
+@media (max-width: 450px) {
+  header .toggle-mode input[type=checkbox]::before {
+    width: 30px;
+    height: 30px;
+    -webkit-transform: translateX(35px) scale(0.8);
+            transform: translateX(35px) scale(0.8);
+  }
+}
+header .toggle-mode input[type=checkbox]:checked::before {
+  -webkit-transform: translateX(0) scale(0.8);
+          transform: translateX(0) scale(0.8);
+}
+@media (max-width: 450px) {
+  header .toggle-mode input[type=checkbox]:checked::before {
+    -webkit-transform: translateX(1) scale(1);
+            transform: translateX(1) scale(1);
+  }
 }
 
 /* Primary Colors */
@@ -170,6 +228,16 @@ main .followers {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
+}
+@media (max-width: 768px) {
+  main .followers {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 450px) {
+  main .followers {
+    grid-template-columns: 1fr;
+  }
 }
 main .followers .card {
   display: -webkit-box;
@@ -299,11 +367,21 @@ main .overview h2 {
   color: var(--color-dark);
   font-size: 1.7em;
 }
+@media (max-width: 450px) {
+  main .overview {
+    margin-bottom: 30px;
+  }
+}
 main .overview .grid-overview {
   margin: 20px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
+}
+@media (max-width: 450px) {
+  main .overview .grid-overview {
+    grid-template-columns: 1fr;
+  }
 }
 main .overview .grid-overview .card {
   display: -webkit-box;
