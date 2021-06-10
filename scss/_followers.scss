@@ -4,6 +4,12 @@ main {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 30px;
+        @include respond(tablet) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include respond(mobile) {
+            grid-template-columns: 1fr;
+        }
         .card {
             display: flex;
             flex-direction: column;
