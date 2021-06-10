@@ -1,7 +1,28 @@
 /* Primary Colors */
 /* Drak Mode */
 /* Light Theme */
+/* Dark Theme */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+:root {
+  --bakground-light: white;
+  --background-light-top: #f5f7ff;
+  --background-light-card: #f0f2fa;
+  --background-light-card-hover: #d0d5e7;
+  --color-dark: #1e202a;
+  --color-dark-light: #63687e;
+  --toggle-btn: #aeb3cb;
+}
+
+.dark {
+  --bakground-light: #1e202a;
+  --background-light-top: #1f212e;
+  --background-light-card: #252a41;
+  --background-light-card-hover: #313854;
+  --color-dark: white;
+  --color-dark-light: #8b97c6;
+  --toggle-btn: linear-gradient(to right, #378fe6 to #3eda82);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -11,13 +32,10 @@
           box-sizing: border-box;
 }
 
-body.dark {
-  background: #1f212e;
-}
-
 body {
   font-family: "Inter", sans-serif;
   font-size: 14px;
+  background: #1e202a;
 }
 body .container {
   width: 80%;
@@ -27,7 +45,52 @@ body .container {
 /* Primary Colors */
 /* Drak Mode */
 /* Light Theme */
-body.dark header {
+/* Dark Theme */
+:root {
+  --bakground-light: white;
+  --background-light-top: #f5f7ff;
+  --background-light-card: #f0f2fa;
+  --background-light-card-hover: #d0d5e7;
+  --color-dark: #1e202a;
+  --color-dark-light: #63687e;
+  --toggle-btn: #aeb3cb;
+}
+
+.dark {
+  --bakground-light: #1e202a;
+  --background-light-top: #1f212e;
+  --background-light-card: #252a41;
+  --background-light-card-hover: #313854;
+  --color-dark: white;
+  --color-dark-light: #8b97c6;
+  --toggle-btn: linear-gradient(to right, #378fe6 to #3eda82);
+}
+
+/* Primary Colors */
+/* Drak Mode */
+/* Light Theme */
+/* Dark Theme */
+:root {
+  --bakground-light: white;
+  --background-light-top: #f5f7ff;
+  --background-light-card: #f0f2fa;
+  --background-light-card-hover: #d0d5e7;
+  --color-dark: #1e202a;
+  --color-dark-light: #63687e;
+  --toggle-btn: #aeb3cb;
+}
+
+.dark {
+  --bakground-light: #1e202a;
+  --background-light-top: #1f212e;
+  --background-light-card: #252a41;
+  --background-light-card-hover: #313854;
+  --color-dark: white;
+  --color-dark-light: #8b97c6;
+  --toggle-btn: linear-gradient(to right, #378fe6 to #3eda82);
+}
+
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,14 +102,14 @@ body.dark header {
           align-items: center;
   padding: 2.5em 0;
 }
-body.dark header .title-box .title {
+header .title-box .title {
   color: white;
 }
-body.dark header .title-box p {
+header .title-box p {
   color: #8b97c6;
   font-weight: 700;
 }
-body.dark header .toggle-mode {
+header .toggle-mode {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,19 +120,19 @@ body.dark header .toggle-mode {
   font-weight: 700;
   font-size: 16px;
 }
-body.dark header .toggle-mode input[type=checkbox] {
+header .toggle-mode input[type=checkbox] {
   -webkit-appearance: none;
   width: 90px;
   height: 40px;
   border-radius: 100px;
   margin-left: 20px;
-  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
-  background: linear-gradient(to right, #378fe6, #3eda82);
+  background: -webkit-gradient(linear, left top, right top, color-stop(to, #378fe6));
+  background: linear-gradient(to right, #378fe6 to #3eda82);
   cursor: pointer;
   outline: 0;
   position: relative;
 }
-body.dark header .toggle-mode input[type=checkbox]::before {
+header .toggle-mode input[type=checkbox]::before {
   content: "";
   height: 40px;
   width: 40px;
@@ -83,6 +146,27 @@ body.dark header .toggle-mode input[type=checkbox]::before {
 /* Primary Colors */
 /* Drak Mode */
 /* Light Theme */
+/* Dark Theme */
+:root {
+  --bakground-light: white;
+  --background-light-top: #f5f7ff;
+  --background-light-card: #f0f2fa;
+  --background-light-card-hover: #d0d5e7;
+  --color-dark: #1e202a;
+  --color-dark-light: #63687e;
+  --toggle-btn: #aeb3cb;
+}
+
+.dark {
+  --bakground-light: #1e202a;
+  --background-light-top: #1f212e;
+  --background-light-card: #252a41;
+  --background-light-card-hover: #313854;
+  --color-dark: white;
+  --color-dark-light: #8b97c6;
+  --toggle-btn: linear-gradient(to right, #378fe6 to #3eda82);
+}
+
 main .followers {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -104,6 +188,9 @@ main .followers .card {
   cursor: pointer;
   background: #252a41;
   position: relative;
+}
+main .followers .card:hover {
+  background: #313854;
 }
 main .followers .card::before {
   content: "";
@@ -182,6 +269,30 @@ main .followers .card span img {
   margin-right: 5px;
 }
 
+/* Primary Colors */
+/* Drak Mode */
+/* Light Theme */
+/* Dark Theme */
+:root {
+  --bakground-light: white;
+  --background-light-top: #f5f7ff;
+  --background-light-card: #f0f2fa;
+  --background-light-card-hover: #d0d5e7;
+  --color-dark: #1e202a;
+  --color-dark-light: #63687e;
+  --toggle-btn: #aeb3cb;
+}
+
+.dark {
+  --bakground-light: #1e202a;
+  --background-light-top: #1f212e;
+  --background-light-card: #252a41;
+  --background-light-card-hover: #313854;
+  --color-dark: white;
+  --color-dark-light: #8b97c6;
+  --toggle-btn: linear-gradient(to right, #378fe6 to #3eda82);
+}
+
 main .overview {
   margin-top: 50px;
 }
@@ -212,10 +323,36 @@ main .overview .grid-overview .card {
   background: #252a41;
   position: relative;
 }
+main .overview .grid-overview .card:hover {
+  background: #313854;
+}
 main .overview .grid-overview .card .title-card {
   margin-bottom: 20px;
 }
 main .overview .grid-overview .card .title-card span {
   font-size: 1.1em;
   color: #8b97c6;
+}
+main .overview .grid-overview .card .title-card,
+main .overview .grid-overview .card .text-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+main .overview .grid-overview .card .text-card {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+main .overview .grid-overview .card .text-card p {
+  font-size: 2.8em;
+  font-weight: 700;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
