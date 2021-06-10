@@ -6,17 +6,17 @@ header {
     padding: 2.5em 0;
     .title-box {
         .title {
-            color: $ColorDark;
+            color: var(--color-dark);
         }
         p {
-            color: $ColorDarkLight;
+            color: var(--color-dark-light);
             font-weight: 700;
         }
     }
     .toggle-mode {
         display: flex;
         align-items: center;
-        color: $ColorDarkLight;
+        color: var(--color-dark-light);
         font-weight: 700;
         font-size: 16px;
         input[type=checkbox] {
@@ -25,7 +25,7 @@ header {
             height: 40px;
             border-radius: 100px;
             margin-left: 20px;
-            background: $ToggleBtnDark;
+            background: var(--toggle-btn);
             cursor: pointer;
             outline: 0;
             position: relative;
@@ -35,19 +35,9 @@ header {
                 width: 40px;
                 position: absolute;
                 border-radius: 50px;
-                background: $BgLight;
+                background: var(--bakground-light);
                 transform: scale(.8);
             }
         }
     }
-}
-
-body.dark {
-    $ToggleBtnDark: linear-gradient(to right, hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
-    $ColorDark: hsl(0, 0%, 100%);
-    $ColorDarkLight: hsl(228, 34%, 66%);
-    $BgLightCard: hsl(228, 28%, 20%);
-    $BgLightCardHover: hsl(228, 26%, 26%);
-    $BgLight: hsl(230, 17%, 14%);
-    $BgLightop: hsl(232, 19%, 15%);
 }
