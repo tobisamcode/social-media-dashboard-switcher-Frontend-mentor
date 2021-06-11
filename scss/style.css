@@ -383,6 +383,11 @@ main .overview .grid-overview {
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 768px) {
+  main .overview .grid-overview {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 main .overview .grid-overview .card {
   display: -webkit-box;
   display: -ms-flexbox;
