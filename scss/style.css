@@ -164,7 +164,7 @@ header .toggle-mode input[type=checkbox] {
     width: 65px;
     height: 30px;
     border-radius: 50px;
-    margin-left: 180px;
+    margin-left: 90px;
   }
 }
 header .toggle-mode input[type=checkbox]::before {
@@ -381,11 +381,6 @@ main .overview .grid-overview {
 @media (max-width: 450px) {
   main .overview .grid-overview {
     grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 768px) {
-  main .overview .grid-overview {
-    grid-template-columns: 1fr 1fr;
   }
 }
 main .overview .grid-overview .card {
