@@ -17,6 +17,9 @@ main {
             @include respond(mobile) {
                 grid-template-columns: 1fr;
             }
+            @include respond(tablet) {
+                grid-template-columns: 1fr 1fr;
+            }
             .card {
                 display: flex;
                 flex-direction: column;
